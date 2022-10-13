@@ -1,9 +1,0 @@
-name: Brik Warlock - Primary Bar
-uid:  brikwlprimarybar
-type: dynamic-group
-
-children:
-  - from: 'cataclysm.yml'
-  - name: other icon
-    uid: gsssjlkgfdjlk
-    type: icon

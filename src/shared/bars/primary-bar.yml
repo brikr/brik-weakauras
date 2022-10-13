@@ -1,0 +1,10 @@
+type: dynamic-group
+variables:
+  iconSize: 48
+
+wa:
+  d:
+    grow: HORIZONTAL
+    groupIcon: 2178526
+    selfPoint: CENTER
+    frameStrata: 3

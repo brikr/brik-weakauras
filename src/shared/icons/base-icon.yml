@@ -1,0 +1,9 @@
+type: icon
+
+wa:
+  d:
+    width: ${iconSize}
+    height: ${iconSize}
+    cooldown: true
+    zoom: 0.3
+    inverse: true

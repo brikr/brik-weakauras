@@ -1,3 +1,10 @@
 name: Warlock - Destruction - Cataclysm
 uid: brikwlcataclysm
-type: icon
+from: ../shared/icons/cooldown-charges-count.yml
+variables:
+  spellId: 152108
+  spellName: Cataclysm
+
+wa:
+  d:
+    internalVersion: 53

@@ -1,0 +1,14 @@
+type: dynamic-group
+variables:
+  iconSize: 35
+
+wa:
+  d:
+    grow: HORIZONTAL
+    groupIcon: 3717312
+    selfPoint: TOP
+    frameStrata: 3
+    yOffset: -1
+    anchorPoint: BOTTOM
+    anchorFrameFrame: WeakAuras:${parentBarName}
+    anchorFrameType: SELECTFRAME

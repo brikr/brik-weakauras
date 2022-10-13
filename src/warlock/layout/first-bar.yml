@@ -1,0 +1,6 @@
+name: Brik Warlock - 1st Bar
+uid:  brikwlbar1
+from: ../../shared/bars/primary-bar.yml
+
+children:
+  - from: ../icons/cataclysm.yml

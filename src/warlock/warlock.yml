@@ -3,7 +3,8 @@ uid: brikwl
 type: group
 
 children:
-  - from: first-bar.yml
+  - from: layout/first-bar.yml
+  - from: layout/second-bar.yml
 
 wa:
   d:

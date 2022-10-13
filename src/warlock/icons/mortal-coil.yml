@@ -1,0 +1,6 @@
+name: Warlock - Destruction - Mortal Coil
+uid: brikwlmortalcoil
+from: ../../shared/icons/cooldown-charges-count.yml
+variables:
+  spellId: 6789
+  spellName: Mortal Coil

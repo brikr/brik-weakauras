@@ -8,4 +8,5 @@ children:
 
 wa:
   d:
-    yOffset: -225
+    groupIcon: 626007
+    # yOffset: -225

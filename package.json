@@ -10,9 +10,7 @@
   "author": "brikr",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "dependencies": {
+    "nodemon": "^2.0.20",
     "weakauras-markup-language": "^1.0.2"
   }
 }

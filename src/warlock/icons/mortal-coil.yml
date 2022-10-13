@@ -1,4 +1,4 @@
-name: Warlock - Destruction - Mortal Coil
+name: Warlock - Mortal Coil
 uid: brikwlmortalcoil
 from: ../../shared/icons/cooldown-charges-count.yml
 variables:

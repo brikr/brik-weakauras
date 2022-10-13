@@ -1,0 +1,16 @@
+{
+  "name": "brik-weakauras",
+  "version": "1.0.0",
+  "description": "My WeakAuras",
+  "scripts": {
+    "build:warlock": "waml compile src/warlock/warlock.yml -o output/warlock.txt",
+    "watch:warlock": "nodemon -L --watch \"src/**\" --ext \"yml\" --exec \"npm run build:warlock\""
+  },
+  "repository": "github:brikr/brik-weakauras",
+  "author": "brikr",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "weakauras-markup-language": "^1.0.1"
+  }
+}

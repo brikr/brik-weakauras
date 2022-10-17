@@ -1,9 +1,42 @@
+# Cooldown/charges/count + track a multi-target debuff e.g. Havoc
+
 from: base-icon.yml
 
 wa:
   d:
     triggers:
       "1":
+        trigger:
+          useMatch_count: true
+          auranames:
+            - "${debuffId}"
+          genericShowOn: showOnCooldown
+          names: []
+          use_spellName: true
+          sourceUnit: player
+          subeventSuffix: _CAST_SUCCESS
+          match_countOperator: ">"
+          match_count: "0"
+          unit: multi
+          use_absorbMode: true
+          debuffType: HARMFUL
+          use_unit: true
+          type: aura2
+          ownOnly: true
+          unevent: auto
+          spellName: 0
+          useName: true
+          event: Cooldown Progress (Spell)
+          realSpellName: 0
+          use_spellId: true
+          spellIds: []
+          use_sourceUnit: true
+          use_genericShowOn: true
+          duration: "35"
+          use_track: true
+          subeventPrefix: SPELL
+        untrigger: []
+      "2":
         trigger:
           track: auto
           duration: "1"
@@ -12,19 +45,19 @@ wa:
           use_showgcd: true
           debuffType: HELPFUL
           type: spell
-          unevent: auto
-          unit: player
+          subeventSuffix: _CAST_START
+          names: []
           use_genericShowOn: true
           event: Cooldown Progress (Spell)
-          spellName: ${spellId}
+          unit: player
           realSpellName: ${spellName}
           use_spellName: true
           spellIds: []
-          subeventPrefix: SPELL
           use_absorbMode: true
-          subeventSuffix: _CAST_START
+          subeventPrefix: SPELL
+          unevent: auto
           use_track: true
-          names: []
+          spellName: ${spellId}
         untrigger:
           genericShowOn: showAlways
       disjunctive: any
@@ -33,21 +66,26 @@ wa:
       - check:
           trigger: -2
           variable: AND
-          op: ==
           checks:
             - trigger: 1
+              variable: show
+              value: 0
+            - trigger: 2
               variable: onCooldown
               value: 1
-            - trigger: 1
-              variable: charges
-              op: ==
-              value: "0"
         changes:
           - value: true
             property: desaturate
+      - check:
+          trigger: 1
+          variable: show
+          value: 1
+        changes:
+          - value: true
+            property: sub.3.glow
     subRegions:
       - type: subbackground
-      - text_text_format_p_time_precision: 1
+      - text_text_format_p_time_format: 0
         text_text_format_s_format: none
         text_text: "%s"
         text_text_format_p_format: timed
@@ -58,32 +96,32 @@ wa:
         text_justify: CENTER
         rotateText: NONE
         type: subtext
-        text_shadowXOffset: 0
+        text_text_format_p_time_precision: 1
         text_color:
           - 1
           - 1
           - 1
           - 1
         text_font: LEMONMILK-Regular
-        text_text_format_p_time_dynamic_threshold: 60
+        anchorXOffset: 0
         text_shadowYOffset: 0
-        text_fontType: OUTLINE
-        text_wordWrap: WordWrap
         text_visible: true
+        text_wordWrap: WordWrap
+        text_fontType: OUTLINE
         text_anchorPoint: OUTER_TOP
-        text_anchorYOffset: -4
         text_shadowColor:
           - 0
           - 0
           - 0
           - 1
+        text_anchorYOffset: -4
         text_fontSize: 20
-        anchorXOffset: 0
-        text_text_format_p_time_format: 0
+        text_text_format_p_time_dynamic_threshold: 60
+        text_shadowXOffset: 0
       - glowFrequency: 0.25
         type: subglow
         useGlowColor: false
-        glowType: buttonOverlay
+        glowType: Pixel
         glowLength: 10
         glowYOffset: 0
         glowColor:

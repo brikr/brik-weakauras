@@ -1,8 +1,10 @@
 name: Brik Warlock - 1st Bar
 uid:  brikwlbar1
 from: ../../shared/bars/primary-bar.yml
-variables:
-  iconSize: 48
 
 children:
+  - from: ../icons/immolate.yml
+  - from: ../icons/conflagrate.yml
+  - from: ../icons/havoc.yml
   - from: ../icons/cataclysm.yml
+  - from: ../icons/soul-rot.yml

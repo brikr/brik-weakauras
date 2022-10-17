@@ -1,0 +1,33 @@
+from: cooldown-charges-count.yml
+
+wa:
+  d:
+    conditions:
+      - check:
+          trigger: -2
+          variable: AND
+          op: ==
+          checks:
+            - trigger: 1
+              variable: onCooldown
+              value: 1
+            - trigger: 1
+              variable: charges
+              op: ==
+              value: "0"
+        changes:
+          - value: true
+            property: desaturate
+      - check:
+          trigger: -2
+          variable: AND
+          checks:
+            - trigger: -1
+              variable: incombat
+              value: 1
+            - trigger: 1
+              variable: onCooldown
+              value: 0
+        changes:
+          - value: true
+            property: sub.3.glow

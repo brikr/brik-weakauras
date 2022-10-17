@@ -1,0 +1,8 @@
+name: Warlock - Destruction - Immolate
+uid: brikwlimmolate
+from: ../../shared/icons/dot.yml
+variables:
+  spellId: 348
+  debuffId: 157736
+  debuffName: Immolate
+  pandemicDuration: 6

@@ -11,6 +11,6 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.20",
-    "weakauras-markup-language": "^1.0.2"
+    "weakauras-markup-language": "^1.0.4"
   }
 }

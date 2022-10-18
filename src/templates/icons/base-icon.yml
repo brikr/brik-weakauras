@@ -6,4 +6,4 @@ wa:
     height: ${iconSize}
     cooldown: true
     zoom: 0.3
-    inverse: true
+    # inverse: true

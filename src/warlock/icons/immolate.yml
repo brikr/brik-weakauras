@@ -1,6 +1,6 @@
 name: Warlock - Destruction - Immolate
 uid: brikwlimmolate
-from: ../../shared/icons/dot.yml
+from: ../../templates/icons/dot.yml
 variables:
   spellId: 348
   debuffId: 157736

@@ -1,0 +1,6 @@
+name: Warlock - Shadowfury
+uid: brikwlshadowfury
+from: ../../templates/icons/cooldown-charges-count.yml
+variables:
+  spellId: 30283
+  spellName: Shadowfury

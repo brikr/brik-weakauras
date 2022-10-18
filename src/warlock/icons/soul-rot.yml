@@ -1,6 +1,6 @@
 name: Warlock - Soul Rot
 uid: brikwlsoulrot
-from: ../../shared/icons/cooldown-charges-count.yml
+from: ../../templates/icons/cooldown-charges-count.yml
 variables:
   spellId: 325640
   spellName: Soul Rot

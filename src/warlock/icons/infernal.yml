@@ -1,0 +1,7 @@
+name: Warlock - Destruction - Summon Infernal
+uid: brikwlinfernal
+from: ../../templates/icons/cooldown-charges-count-totem.yml
+variables:
+  totemName: Infernal
+  spellId: 1122
+  spellName: Summon Infernal

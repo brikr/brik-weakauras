@@ -1,6 +1,6 @@
 name: Warlock - Destruction - Havoc
 uid: brikwlhavoc
-from: ../../shared/icons/cooldown-charges-count-multi-debuff.yml
+from: ../../templates/icons/cooldown-charges-count-multi-debuff.yml
 variables:
   spellId: 80240
   spellName: Havoc

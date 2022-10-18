@@ -1,8 +1,16 @@
 name: Brik Warlock - 2nd Bar
 uid: brikwlbar2
-from: ../../shared/bars/auxiliary-bar.yml
+from: ../../templates/bars/auxiliary-bar.yml
 variables:
   parentBarName: Brik Warlock - 1st Bar
 
 children:
+  - from: ../icons/infernal.yml
+  - from: ../../shared/icons/berserking.yml
+    name: Warlock - Troll - Berserking
+    uid: brikwlberserking
   - from: ../icons/mortal-coil.yml
+  - from: ../icons/shadowfury.yml
+  - from: ../icons/unending-resolve.yml
+  - from: ../icons/dark-pact.yml
+  - from: ../icons/command-demon.yml

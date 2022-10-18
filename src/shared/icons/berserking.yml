@@ -1,0 +1,7 @@
+name: Troll - Berserking
+uid: briksharedberserking
+from: ../../templates/icons/cooldown-charges-count-buff.yml
+variables:
+  spellId: 26297
+  spellName: Berserking
+  buffName: Berserking

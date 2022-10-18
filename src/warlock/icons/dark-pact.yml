@@ -1,0 +1,7 @@
+name: Warlock - Dark Pact
+uid: brikwldarkpact
+from: ../../templates/icons/cooldown-charges-count-buff.yml
+variables:
+  spellId: 108416
+  spellName: Dark Pact
+  buffName: Dark Pact

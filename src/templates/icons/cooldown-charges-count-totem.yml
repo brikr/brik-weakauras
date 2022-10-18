@@ -1,0 +1,130 @@
+from: base-icon.yml
+
+wa:
+  d:
+    triggers:
+      "1":
+        trigger:
+          use_genericShowOn: true
+          genericShowOn: showOnCooldown
+          names: []
+          use_totemType: false
+          debuffType: HELPFUL
+          type: spell
+          subeventSuffix: _CAST_START
+          spellName: 0
+          event: Totem
+          totemName: ${totemName}
+          realSpellName: 0
+          use_spellName: true
+          spellIds: []
+          use_totemName: true
+          subeventPrefix: SPELL
+          unit: player
+          use_track: true
+          totemType: 1
+        untrigger: []
+      "2":
+        trigger:
+          track: auto
+          use_matchedRune: false
+          duration: "1"
+          genericShowOn: showAlways
+          unit: player
+          use_showgcd: true
+          debuffType: HELPFUL
+          type: spell
+          unevent: auto
+          event: Cooldown Progress (Spell)
+          spellName: ${spellId}
+          realSpellName: ${spellName}
+          use_spellName: true
+          spellIds: []
+          subeventSuffix: _CAST_START
+          use_genericShowOn: true
+          subeventPrefix: SPELL
+          use_track: true
+          names: []
+        untrigger:
+          genericShowOn: showAlways
+      disjunctive: any
+      activeTriggerMode: -10
+    conditions:
+      - check:
+          trigger: -2
+          variable: AND
+          checks:
+            - trigger: 1
+              variable: show
+              value: 0
+            - trigger: 2
+              variable: onCooldown
+              value: 1
+        changes:
+          - value: true
+            property: desaturate
+      - check:
+          trigger: 1
+          variable: show
+          value: 1
+        changes:
+          - value: true
+            property: sub.3.glow
+    subRegions:
+      - type: subbackground
+      - text_shadowXOffset: 0
+        text_text_format_s_format: none
+        text_text: "%s"
+        text_shadowColor:
+          - 0
+          - 0
+          - 0
+          - 1
+        text_selfPoint: BOTTOMRIGHT
+        text_automaticWidth: Auto
+        text_fixedWidth: 64
+        anchorYOffset: 0
+        text_justify: CENTER
+        rotateText: NONE
+        type: subtext
+        text_color:
+          - 1
+          - 1
+          - 1
+          - 1
+        text_font: LEMONMILK-Regular
+        text_shadowYOffset: 0
+        text_wordWrap: WordWrap
+        text_visible: true
+        text_anchorPoint: BOTTOMRIGHT
+        text_fontSize: 20
+        anchorXOffset: 0
+        text_fontType: OUTLINE
+      - glowFrequency: 0.25
+        type: subglow
+        useGlowColor: false
+        glowType: Pixel
+        glowLength: 10
+        glowYOffset: 0
+        glowColor:
+          - 1
+          - 1
+          - 1
+          - 1
+        glowXOffset: 0
+        glow: false
+        glowThickness: 1
+        glowScale: 1
+        glowLines: 8
+        glowBorder: false
+    load:
+      talent:
+        multi: []
+      spec:
+        multi: []
+      class:
+        multi: []
+      size:
+        multi: []
+      use_spellknown: true
+      spellknown: ${spellId}

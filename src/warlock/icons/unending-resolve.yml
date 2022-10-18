@@ -1,0 +1,7 @@
+name: Warlock - Unending Resolve
+uid: brikwlunendingresolve
+from: ../../templates/icons/cooldown-charges-count-buff.yml
+variables:
+  spellId: 104773
+  spellName: Unending Resolve
+  buffName: Unending Resolve

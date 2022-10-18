@@ -1,0 +1,6 @@
+name: Trinket - Shadowed Orb of Torment
+uid: briksharedshadowedorboftorment
+from: ../../templates/icons/item-cooldown-buff.yml
+variables:
+  itemId: 186428
+  buffId: 356326

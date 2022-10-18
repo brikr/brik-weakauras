@@ -1,0 +1,6 @@
+name: Warlock - Demonic Gateway
+uid: brikwldemonicgateway
+from: ../../templates/icons/debuff-inverse.yml
+variables:
+  spellId: 111771
+  debuffId: 113942

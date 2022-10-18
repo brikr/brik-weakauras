@@ -1,0 +1,7 @@
+name: Night Fae - Soulshape
+uid: briksharedsoulshape
+from: ../../templates/icons/cooldown-charges-count-buff.yml
+variables:
+  spellId: 310143
+  spellName: Soulshape
+  buffName: Soulshape

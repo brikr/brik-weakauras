@@ -5,6 +5,8 @@ type: group
 children:
   - from: layout/first-bar.yml
   - from: layout/second-bar.yml
+  - from: layout/third-bar.yml
+  - from: layout/fourth-bar.yml
 
 wa:
   d:

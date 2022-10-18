@@ -5,10 +5,11 @@ variables:
 wa:
   d:
     grow: HORIZONTAL
-    groupIcon: 3717312
+    groupIcon: ${groupIcon}
     selfPoint: TOP
     frameStrata: 3
-    yOffset: -1
+    yOffset: 0
     anchorPoint: BOTTOM
     anchorFrameFrame: WeakAuras:${parentBarName}
     anchorFrameType: SELECTFRAME
+    space: 0

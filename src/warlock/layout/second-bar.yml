@@ -3,6 +3,7 @@ uid: brikwlbar2
 from: ../../templates/bars/auxiliary-bar.yml
 variables:
   parentBarName: Brik Warlock - 1st Bar
+  groupIcon: 3717312
 
 children:
   - from: ../icons/infernal.yml

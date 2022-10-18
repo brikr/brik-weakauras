@@ -1,0 +1,8 @@
+name: Warlock - Fel Domination
+uid: brikwlfeldomination
+from: ../../templates/icons/cooldown-buff-hidden.yml
+variables:
+  spellId: 333889
+  spellName: Fel Domination
+  buffId: 333889
+  buffName: Fel Domination

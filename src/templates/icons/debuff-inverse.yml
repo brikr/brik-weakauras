@@ -1,0 +1,96 @@
+# e.g. demonic gateway being usable
+from: base-icon.yml
+
+wa:
+  d:
+    triggers:
+      "1":
+        trigger:
+          track: auto
+          matchesShowOn: showAlways
+          genericShowOn: showAlways
+          names: []
+          use_showgcd: true
+          debuffType: HARMFUL
+          use_remaining: false
+          unit: player
+          auraspellids:
+            - ${debuffId}
+          use_spellCount: false
+          subeventSuffix: _CAST_START
+          event: Cooldown Progress (Spell)
+          type: aura2
+          spellIds: []
+          use_genericShowOn: true
+          useExactSpellId: true
+          use_charges: false
+          use_track: true
+          subeventPrefix: SPELL
+        untrigger: []
+      activeTriggerMode: -10
+    subRegions:
+      - type: subbackground
+      - text_shadowXOffset: 0
+        text_text_format_s_format: none
+        text_text: "%s"
+        text_shadowColor:
+          - 0
+          - 0
+          - 0
+          - 1
+        text_selfPoint: BOTTOMRIGHT
+        text_automaticWidth: Auto
+        text_fixedWidth: 64
+        anchorYOffset: 0
+        text_justify: CENTER
+        rotateText: NONE
+        type: subtext
+        text_color:
+          - 1
+          - 1
+          - 1
+          - 1
+        text_font: LEMONMILK-Regular
+        text_shadowYOffset: 0
+        text_wordWrap: WordWrap
+        text_visible: true
+        text_anchorPoint: BOTTOMRIGHT
+        text_fontSize: 20
+        anchorXOffset: 0
+        text_fontType: OUTLINE
+      - glowFrequency: 0.25
+        type: subglow
+        useGlowColor: false
+        glowType: buttonOverlay
+        glowLength: 10
+        glowYOffset: 0
+        glowColor:
+          - 1
+          - 1
+          - 1
+          - 1
+        glowXOffset: 0
+        glow: false
+        glowThickness: 1
+        glowScale: 1
+        glowLines: 8
+        glowBorder: false
+    conditions:
+      - check:
+          trigger: 1
+          variable: buffed
+          value: 1
+        changes:
+          - value: true
+            property: desaturate
+    load:
+      talent:
+        multi: []
+      spec:
+        multi: []
+      class:
+        multi: []
+      size:
+        multi: []
+      use_spellknown: true
+      spellknown: ${spellId}

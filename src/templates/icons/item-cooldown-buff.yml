@@ -1,0 +1,95 @@
+from: base-icon.yml
+
+wa:
+  d:
+    triggers:
+      "1":
+        trigger:
+          useName: false
+          auraspellids:
+            - ${buffId}
+          event: Health
+          subeventPrefix: SPELL
+          useExactSpellId: true
+          names: []
+          spellIds: []
+          unit: player
+          subeventSuffix: _CAST_START
+          type: aura2
+          debuffType: HELPFUL
+        untrigger: []
+      "2":
+        trigger:
+          itemName: ${itemId}
+          use_absorbMode: true
+          genericShowOn: showAlways
+          subeventPrefix: SPELL
+          itemSlot: 13
+          unit: player
+          use_unit: true
+          use_totemType: false
+          spellName: 0
+          use_totemName: true
+          type: item
+          use_itemName: true
+          subeventSuffix: _CAST_START
+          realSpellName: 0
+          event: Cooldown Progress (Item)
+          totemType: 1
+          use_itemSlot: true
+          use_spellName: true
+          spellIds: []
+          use_testForCooldown: true
+          debuffType: HELPFUL
+          use_genericShowOn: true
+          use_track: true
+          names: []
+        untrigger: []
+      disjunctive: any
+      activeTriggerMode: -10
+    conditions:
+      - check:
+          trigger: 2
+          variable: onCooldown
+          value: 1
+        changes:
+          - value: true
+            property: desaturate
+      - check:
+          trigger: 1
+          variable: show
+          value: 1
+        changes:
+          - value: true
+            property: sub.2.glow
+          - property: desaturate
+    subRegions:
+      - type: subbackground
+      - glowFrequency: 0.25
+        type: subglow
+        glowXOffset: 0
+        glowType: Pixel
+        glowLength: 10
+        glowYOffset: 0
+        glowColor:
+          - 1
+          - 1
+          - 1
+          - 1
+        useGlowColor: false
+        glow: false
+        glowScale: 1
+        glowThickness: 1
+        glowLines: 8
+        glowBorder: false
+    load:
+      talent:
+        multi: []
+      spec:
+        multi: []
+      class:
+        multi: []
+      size:
+        multi: []
+      use_itemequiped: true
+      itemequiped: ${itemId}

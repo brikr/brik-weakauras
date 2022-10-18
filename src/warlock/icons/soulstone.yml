@@ -1,0 +1,6 @@
+name: Warlock - Soulstone
+uid: brikwlsoulstone
+from: ../../templates/icons/cooldown-charges-count.yml
+variables:
+  spellId: 20707
+  spellName: Soulstone

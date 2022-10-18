@@ -1,0 +1,160 @@
+# will probably re-do this one in DF when it's talent-based
+name: Brik Warlock - Ritual of Ruin
+uid: brikwlritualofruin
+from: ../../templates/icons/base-icon.yml
+
+wa:
+  d:
+    triggers:
+      "1":
+        trigger:
+          track: auto
+          use_genericShowOn: true
+          genericShowOn: showAlways
+          subeventPrefix: SPELL
+          use_showgcd: true
+          debuffType: HELPFUL
+          type: aura2
+          auraspellids:
+            - "364349"
+          subeventSuffix: _CAST_START
+          use_spellCount: false
+          useExactSpellId: true
+          event: Cooldown Progress (Spell)
+          spellIds: []
+          use_charges: false
+          unit: player
+          use_remaining: false
+          use_track: true
+          names: []
+        untrigger: []
+      "2":
+        trigger:
+          type: aura2
+          useExactSpellId: true
+          debuffType: HELPFUL
+          matchesShowOn: showAlways
+          auraspellids:
+            - "364348"
+          unit: player
+        untrigger: []
+      "3":
+        trigger:
+          type: unit
+          spellId: 116858
+          use_absorbMode: true
+          event: Cast
+          unit: player
+          use_spellId: true
+          use_absorbHealMode: true
+          use_unit: true
+          debuffType: HELPFUL
+        untrigger: []
+      disjunctive: any
+      activeTriggerMode: -10
+    conditions:
+      - check:
+          trigger: -2
+          variable: AND
+          checks:
+            - trigger: 1
+              variable: show
+              value: 0
+            - trigger: 2
+              variable: totalStacks
+              op: ==
+              value: "0"
+        changes:
+          - value: true
+            property: desaturate
+      - check:
+          trigger: -2
+          variable: AND
+          checks:
+            - trigger: 1
+              variable: show
+              value: 1
+            - trigger: -1
+              variable: incombat
+              value: 1
+        changes:
+          - value: true
+            property: sub.3.glow
+      - check:
+          trigger: -2
+          variable: AND
+          op: ">="
+          checks:
+            - trigger: 2
+              variable: totalStacks
+              op: ">="
+              value: "8"
+            - trigger: 3
+              variable: show
+              value: 1
+        changes:
+          - value: true
+            property: sub.3.glow
+    subRegions:
+      - type: subbackground
+      - text_shadowXOffset: 0
+        text_text_format_s_format: none
+        text_text: "%s"
+        text_shadowColor:
+          - 0
+          - 0
+          - 0
+          - 1
+        text_selfPoint: BOTTOMRIGHT
+        text_automaticWidth: Auto
+        text_fixedWidth: 64
+        anchorYOffset: 0
+        text_justify: CENTER
+        rotateText: NONE
+        type: subtext
+        text_color:
+          - 1
+          - 1
+          - 1
+          - 1
+        text_font: LEMONMILK-Regular
+        text_shadowYOffset: 0
+        text_wordWrap: WordWrap
+        text_visible: true
+        text_anchorPoint: BOTTOMRIGHT
+        text_fontSize: 20
+        anchorXOffset: 0
+        text_fontType: OUTLINE
+      - glowFrequency: 0.25
+        type: subglow
+        useGlowColor: false
+        glowType: buttonOverlay
+        glowLength: 10
+        glowYOffset: 0
+        glowColor:
+          - 1
+          - 1
+          - 1
+          - 1
+        glowXOffset: 0
+        glow: false
+        glowThickness: 1
+        glowScale: 1
+        glowLines: 8
+        glowBorder: false
+    load:
+      use_never: false
+      talent:
+        multi: []
+      use_vehicle: false
+      spec:
+        single: 3
+        multi:
+          "3": true
+      use_class: true
+      class:
+        single: WARLOCK
+        multi:
+          WARLOCK: true
+      size:
+        multi: []

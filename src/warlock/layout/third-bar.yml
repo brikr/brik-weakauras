@@ -1,0 +1,18 @@
+name: Brik Warlock - 3rd Bar
+uid: brikwlbar3
+from: ../../templates/bars/auxiliary-bar.yml
+variables:
+  parentBarName: Brik Warlock - 2nd Bar
+  groupIcon: 3717313
+
+children:
+  - from: ../../shared/icons/shadowed-orb-of-torment.yml
+    name: Warlock - Trinket - Shadowed Orb of Torment
+    uid: brikwlshadowedorboftorment
+  - from: ../icons/ritual-of-ruin.yml
+  - from: ../icons/demonic-circle-teleport.yml
+  - from: ../icons/demonic-gateway-usable.yml
+  - from: ../icons/soulstone.yml
+  - from: ../../shared/icons/soulshape.yml
+    name: Warlock - Night Fae - Soulshape
+    uid: brikwlsoulshape

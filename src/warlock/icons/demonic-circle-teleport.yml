@@ -1,0 +1,6 @@
+name: 'Warlock - Destruction - Demonic Circle: Teleport'
+uid: brikwldemoniccircleteleport
+from: ../../templates/icons/cooldown-charges-count.yml
+variables:
+  spellId: 48020
+  spellName: 'Demonic Circle: Teleport'

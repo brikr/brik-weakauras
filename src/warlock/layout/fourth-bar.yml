@@ -1,0 +1,9 @@
+name: Brik Warlock - 4th Bar
+uid: brikwlbar4
+from: ../../templates/bars/auxiliary-bar.yml
+variables:
+  parentBarName: Brik Warlock - 3rd Bar
+  groupIcon: 3717314
+
+children:
+  - from: ../icons/fel-domination-hidden.yml

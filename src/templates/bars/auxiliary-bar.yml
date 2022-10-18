@@ -8,7 +8,7 @@ wa:
     groupIcon: ${groupIcon}
     selfPoint: TOP
     frameStrata: 3
-    yOffset: 0
+    yOffset: -1
     anchorPoint: BOTTOM
     anchorFrameFrame: WeakAuras:${parentBarName}
     anchorFrameType: SELECTFRAME
